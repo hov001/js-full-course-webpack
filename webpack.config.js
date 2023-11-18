@@ -15,5 +15,13 @@ module.exports = {
       template: path.resolve(__dirname, 'index.html')
     }),
     new CleanWebpackPlugin()
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 }
