@@ -1,3 +1,6 @@
-import { hello } from './hello.js'
+import { createElement } from "./createElement"
 
-console.log(hello)
+const root = document.getElementById('root')
+
+root.append(createElement('h1', 'hello world!!!'))
+

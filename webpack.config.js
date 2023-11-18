@@ -1,12 +1,6 @@
 const path = require('path')
-
-const mainPath = path.resolve(__dirname)
-
-console.log('mainPath:::', mainPath)
-
-const mode = process.env
-
-console.log('mode:::', mode)
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -16,4 +10,10 @@ module.exports = {
     filename: '[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, 'index.html')
+    }),
+    new CleanWebpackPlugin()
+  ]
 }
