@@ -11,5 +11,8 @@
     "js"
   ],
   "author": "H. Kocharyan <hovkocharyan81@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.89.0"
+  }
 }
